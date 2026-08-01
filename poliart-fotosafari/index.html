@@ -118,6 +118,7 @@ canvas{display:block;width:100vw;height:100vh}
 <div id="gal">
   <button class="close" id="btnGalClose">Закрыть ×</button>
   <h2>МОЯ ГАЛЕРЕЯ</h2>
+  <div id="galCount" style="color:#8fa2b8;margin:-8px 0 12px;font-size:13px"></div>
   <div id="grid"></div>
 </div>
 <script type="importmap">
@@ -137,6 +138,18 @@ import {UnrealBloomPass} from 'three/addons/postprocessing/UnrealBloomPass.js';
 import {OutputPass} from 'three/addons/postprocessing/OutputPass.js';
 
 const $=id=>document.getElementById(id);
+addEventListener('error',e=>{
+  const d=document.createElement('div');
+  d.style.cssText='position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#b33;color:#fff;font:12px/1.4 monospace;padding:6px 10px;white-space:pre-wrap';
+  d.textContent='ОШИБКА: '+(e.error&&e.error.stack||e.message||String(e.filename||'')+':'+e.lineno);
+  document.body.appendChild(d);
+});
+window.addEventListener('unhandledrejection',e=>{
+  const d=document.createElement('div');
+  d.style.cssText='position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#a33;color:#fff;font:12px/1.4 monospace;padding:6px 10px;white-space:pre-wrap';
+  d.textContent='REJECT: '+(e.reason&&e.reason.stack||e.reason);
+  document.body.appendChild(d);
+});
 const canvas=$('c');
 const renderer=new THREE.WebGLRenderer({canvas,antialias:true,preserveDrawingBuffer:true});
 renderer.setPixelRatio(Math.min(devicePixelRatio,2));
@@ -686,7 +699,8 @@ function finalizeShot(){
   const shot=pendingShot;
   if(!shot)return;
   pendingShot=null;
-  const r=snapshot();
+  let r=null;
+  try{r=snapshot();}catch(err){console.error('snapshot fail',err);}
   shots.push({url:r,name:shot.species.name,ic:shot.species.ic,score:shot.score,msg:shot.msg,bonuses:shot.bonuses,ok:shot.ok});
   if(shot.ok&&shot.score>=55){
     const prev=captured[shot.species.key]||0;
@@ -718,10 +732,10 @@ function checkWin(){
 
 function showPopup(shot){
   const p=$('popup');
-  const sc=$('popup .score');
-  const st=$('popup .star');
-  const nm=$('popup .nm');
-  const bc=$('popup .bchips');
+  const sc=p.querySelector('.score');
+  const st=p.querySelector('.star');
+  const nm=p.querySelector('.nm');
+  const bc=p.querySelector('.bchips');
   sc.textContent=shot.ok?shot.score+'':'—';
   sc.style.color=shot.score>=70?'#ffd68c':shot.score>=55?'#bfe8a8':'#d7dbe0';
   st.textContent=shot.ok?stars(shot.score):'';
@@ -761,8 +775,10 @@ function toggleGallery(force){
 }
 function renderGallery(){
   const grid=$('grid');grid.innerHTML='';
+  const count=$('galCount');
+  if(count)count.textContent='Кадров: '+shots.length;
   if(shots.length===0){
-    grid.innerHTML='<div class="desc" style="color:#8fa2b8">Пока ни одного кадра. Вперёд на охоту за светом!</div>';
+    grid.innerHTML='<div class="desc" style="color:#8fa2b8">Пока ни одного кадра. Вперёд на охоту за светом!</div><div class="desc" style="color:#b66">Если снимал, но пусто — смотри консоль (F12) на ОШИБКА.</div>';
   }
   [...shots].reverse().forEach((sh,i)=>{
     const card=document.createElement('div');
