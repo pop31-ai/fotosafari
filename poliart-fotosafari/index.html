@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ПОЛИАРТ · Фотосафари</title>
+<title>╨Я╨Ю╨Ы╨Ш╨Р╨а╨в ┬╖ ╨д╨╛╤В╨╛╤Б╨░╤Д╨░╤А╨╕</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{width:100%;height:100%;overflow:hidden;background:#000;color:#fff;font-family:'Segoe UI',system-ui,sans-serif;user-select:none;-webkit-user-select:none}
@@ -73,51 +73,51 @@ canvas{display:block;width:100vw;height:100vh}
 <div id="brackets"><div class="c1"></div><div class="c2"></div><div class="c3"></div><div class="c4"></div></div>
 <div id="dot"></div>
 <div id="hudTop">
-  <div class="title">ПОЛИАРТ · ФОТОСАФАРИ</div>
+  <div class="title">╨Я╨Ю╨Ы╨Ш╨Р╨а╨в ┬╖ ╨д╨Ю╨в╨Ю╨б╨Р╨д╨Р╨а╨Ш</div>
   <div id="progress"></div>
 </div>
 <div id="cooldown"></div>
 <div id="hudRight"><div id="zoom">50mm</div></div>
-<div id="hint">WASD — движение · Мышь — обзор · Колесо — зум · ЛКМ/Пробел — кадр · G — галерея</div>
-<div id="poseHint">✨ Объект позирует — лови момент!</div>
+<div id="hint">WASD тАФ ╨┤╨▓╨╕╨╢╨╡╨╜╨╕╨╡ ┬╖ ╨Ь╤Л╤И╤М тАФ ╨╛╨▒╨╖╨╛╤А ┬╖ ╨Ъ╨╛╨╗╨╡╤Б╨╛ тАФ ╨╖╤Г╨╝ ┬╖ ╨Ы╨Ъ╨Ь/╨Я╤А╨╛╨▒╨╡╨╗ тАФ ╨║╨░╨┤╤А ┬╖ G тАФ ╨│╨░╨╗╨╡╤А╨╡╤П</div>
+<div id="poseHint">тЬи ╨Ю╨▒╤К╨╡╨║╤В ╨┐╨╛╨╖╨╕╤А╤Г╨╡╤В тАФ ╨╗╨╛╨▓╨╕ ╨╝╨╛╨╝╨╡╨╜╤В!</div>
 <div id="popup"><div class="score"></div><div class="star"></div><div class="nm"></div><div class="bchips"></div></div>
 <div id="flash"></div>
 
 <div id="startScreen" class="overlay">
-  <h1>ПОЛИАРТ</h1>
-  <h2>ФОТОСАФАРИ · ЗОЛОТОЙ ЧАС</h2>
+  <h1>╨Я╨Ю╨Ы╨Ш╨Р╨а╨в</h1>
+  <h2>╨д╨Ю╨в╨Ю╨б╨Р╨д╨Р╨а╨Ш ┬╖ ╨Ч╨Ю╨Ы╨Ю╨в╨Ю╨Щ ╨з╨Р╨б</h2>
   <div class="desc">
-    Вы — фотограф-натуралист. Дождитесь <b>фотогеничной позы</b> животных, стройте кадр по
-    <b>правилу третей</b>, ловите свет и делайте снимки. Камера сама оценит композицию,
-    свет и выразительность. Соберите коллекцию из всех обитателей парка.<br/><br/>
-    <b style="color:#8fd0a0">Семейный фотосимулятор — содержание соответствует нормам закона.</b>
+    ╨Т╤Л тАФ ╤Д╨╛╤В╨╛╨│╤А╨░╤Д-╨╜╨░╤В╤Г╤А╨░╨╗╨╕╤Б╤В. ╨Ф╨╛╨╢╨┤╨╕╤В╨╡╤Б╤М <b>╤Д╨╛╤В╨╛╨│╨╡╨╜╨╕╤З╨╜╨╛╨╣ ╨┐╨╛╨╖╤Л</b> ╨╢╨╕╨▓╨╛╤В╨╜╤Л╤Е, ╤Б╤В╤А╨╛╨╣╤В╨╡ ╨║╨░╨┤╤А ╨┐╨╛
+    <b>╨┐╤А╨░╨▓╨╕╨╗╤Г ╤В╤А╨╡╤В╨╡╨╣</b>, ╨╗╨╛╨▓╨╕╤В╨╡ ╤Б╨▓╨╡╤В ╨╕ ╨┤╨╡╨╗╨░╨╣╤В╨╡ ╤Б╨╜╨╕╨╝╨║╨╕. ╨Ъ╨░╨╝╨╡╤А╨░ ╤Б╨░╨╝╨░ ╨╛╤Ж╨╡╨╜╨╕╤В ╨║╨╛╨╝╨┐╨╛╨╖╨╕╤Ж╨╕╤О,
+    ╤Б╨▓╨╡╤В ╨╕ ╨▓╤Л╤А╨░╨╖╨╕╤В╨╡╨╗╤М╨╜╨╛╤Б╤В╤М. ╨б╨╛╨▒╨╡╤А╨╕╤В╨╡ ╨║╨╛╨╗╨╗╨╡╨║╤Ж╨╕╤О ╨╕╨╖ ╨▓╤Б╨╡╤Е ╨╛╨▒╨╕╤В╨░╤В╨╡╨╗╨╡╨╣ ╨┐╨░╤А╨║╨░.<br/><br/>
+    <b style="color:#8fd0a0">╨б╨╡╨╝╨╡╨╣╨╜╤Л╨╣ ╤Д╨╛╤В╨╛╤Б╨╕╨╝╤Г╨╗╤П╤В╨╛╤А тАФ ╤Б╨╛╨┤╨╡╤А╨╢╨░╨╜╨╕╨╡ ╤Б╨╛╨╛╤В╨▓╨╡╤В╤Б╤В╨▓╤Г╨╡╤В ╨╜╨╛╤А╨╝╨░╨╝ ╨╖╨░╨║╨╛╨╜╨░.</b>
   </div>
   <div class="keylist">
-    <b>W A S D</b><span>движение</span>
-    <b>Мышь</b><span>обзор</span>
-    <b>Колесо</b><span>зум объектива</span>
-    <b>ЛКМ / Пробел</b><span>снимок</span>
-    <b>G</b><span>галерея</span>
+    <b>W A S D</b><span>╨┤╨▓╨╕╨╢╨╡╨╜╨╕╨╡</span>
+    <b>╨Ь╤Л╤И╤М</b><span>╨╛╨▒╨╖╨╛╤А</span>
+    <b>╨Ъ╨╛╨╗╨╡╤Б╨╛</b><span>╨╖╤Г╨╝ ╨╛╨▒╤К╨╡╨║╤В╨╕╨▓╨░</span>
+    <b>╨Ы╨Ъ╨Ь / ╨Я╤А╨╛╨▒╨╡╨╗</b><span>╤Б╨╜╨╕╨╝╨╛╨║</span>
+    <b>G</b><span>╨│╨░╨╗╨╡╤А╨╡╤П</span>
   </div>
-  <button class="btn" id="btnStart">Войти в парк</button>
+  <button class="btn" id="btnStart">╨Т╨╛╨╣╤В╨╕ ╨▓ ╨┐╨░╤А╨║</button>
 </div>
 
 <div id="pauseScreen" class="overlay hide">
-  <h1>ПАУЗА</h1>
-  <div class="desc">Кликните, чтобы продолжить съёмку</div>
-  <button class="btn" id="btnResume">Продолжить</button>
+  <h1>╨Я╨Р╨г╨Ч╨Р</h1>
+  <div class="desc">╨Ъ╨╗╨╕╨║╨╜╨╕╤В╨╡, ╤З╤В╨╛╨▒╤Л ╨┐╤А╨╛╨┤╨╛╨╗╨╢╨╕╤В╤М ╤Б╤К╤С╨╝╨║╤Г</div>
+  <button class="btn" id="btnResume">╨Я╤А╨╛╨┤╨╛╨╗╨╢╨╕╤В╤М</button>
 </div>
 
 <div id="winScreen" class="overlay hide">
-  <h1>КОЛЛЕКЦИЯ ЗАВЕРШЕНА!</h1>
-  <div class="desc">Вы засняли всех обитателей парка в фотогеничных кадрах.</div>
-  <button class="btn" id="btnWinGal">Смотреть галерею</button>
-  <button class="btn" style="margin-top:12px" id="btnAgain">Снимать ещё</button>
+  <h1>╨Ъ╨Ю╨Ы╨Ы╨Х╨Ъ╨ж╨Ш╨п ╨Ч╨Р╨Т╨Х╨а╨и╨Х╨Э╨Р!</h1>
+  <div class="desc">╨Т╤Л ╨╖╨░╤Б╨╜╤П╨╗╨╕ ╨▓╤Б╨╡╤Е ╨╛╨▒╨╕╤В╨░╤В╨╡╨╗╨╡╨╣ ╨┐╨░╤А╨║╨░ ╨▓ ╤Д╨╛╤В╨╛╨│╨╡╨╜╨╕╤З╨╜╤Л╤Е ╨║╨░╨┤╤А╨░╤Е.</div>
+  <button class="btn" id="btnWinGal">╨б╨╝╨╛╤В╤А╨╡╤В╤М ╨│╨░╨╗╨╡╤А╨╡╤О</button>
+  <button class="btn" style="margin-top:12px" id="btnAgain">╨б╨╜╨╕╨╝╨░╤В╤М ╨╡╤Й╤С</button>
 </div>
 
 <div id="gal">
-  <button class="close" id="btnGalClose">Закрыть ×</button>
-  <h2>МОЯ ГАЛЕРЕЯ</h2>
+  <button class="close" id="btnGalClose">╨Ч╨░╨║╤А╤Л╤В╤М ├Ч</button>
+  <h2>╨Ь╨Ю╨п ╨У╨Р╨Ы╨Х╨а╨Х╨п</h2>
   <div id="grid"></div>
 </div>
 <script type="importmap">
@@ -358,11 +358,11 @@ function makeSparkle(){
 }
 
 const SPECIES=[
-  {key:'fox',name:'Лиса',ic:'🦊',build:buildFox,count:3},
-  {key:'deer',name:'Олень',ic:'🦌',build:buildDeer,count:2},
-  {key:'hare',name:'Заяц',ic:'🐇',build:buildHare,count:4},
-  {key:'bird',name:'Птица',ic:'🐦',build:buildBird,count:4},
-  {key:'butterfly',name:'Бабочка',ic:'🦋',build:buildButterfly,count:3}
+  {key:'fox',name:'╨Ы╨╕╤Б╨░',ic:'ЁЯжК',build:buildFox,count:3},
+  {key:'deer',name:'╨Ю╨╗╨╡╨╜╤М',ic:'ЁЯжМ',build:buildDeer,count:2},
+  {key:'hare',name:'╨Ч╨░╤П╤Ж',ic:'ЁЯРЗ',build:buildHare,count:4},
+  {key:'bird',name:'╨Я╤В╨╕╤Ж╨░',ic:'ЁЯРж',build:buildBird,count:4},
+  {key:'butterfly',name:'╨С╨░╨▒╨╛╤З╨║╨░',ic:'ЁЯжЛ',build:buildButterfly,count:3}
 ];
 
 const animals=[];
@@ -638,12 +638,12 @@ const shots=[];
 const captured={};
 let bestShot=0;
 
-function scoreText(s){if(s>=85)return'ШЕДЕВР!';if(s>=70)return'Отличный кадр';if(s>=55)return'Хороший кадр';if(s>=35)return'Так себе';return'Мимо кадра';}
-function stars(s){if(s>=85)return'★ ★ ★';if(s>=70)return'★ ★ ☆';if(s>=55)return'★ ☆ ☆';return'☆ ☆ ☆';}
+function scoreText(s){if(s>=85)return'╨и╨Х╨Ф╨Х╨Т╨а!';if(s>=70)return'╨Ю╤В╨╗╨╕╤З╨╜╤Л╨╣ ╨║╨░╨┤╤А';if(s>=55)return'╨е╨╛╤А╨╛╤И╨╕╨╣ ╨║╨░╨┤╤А';if(s>=35)return'╨в╨░╨║ ╤Б╨╡╨▒╨╡';return'╨Ь╨╕╨╝╨╛ ╨║╨░╨┤╤А╨░';}
+function stars(s){if(s>=85)return'тШЕ тШЕ тШЕ';if(s>=70)return'тШЕ тШЕ тШЖ';if(s>=55)return'тШЕ тШЖ тШЖ';return'тШЖ тШЖ тШЖ';}
 
 function evaluateShot(){
   const aim=aimSubject();
-  if(!aim)return{ok:false,msg:'Мимо кадра',score:0,bonuses:[],species:{key:null,name:'Пустой кадр',ic:'🌄'}};
+  if(!aim)return{ok:false,msg:'╨Ь╨╕╨╝╨╛ ╨║╨░╨┤╤А╨░',score:0,bonuses:[],species:{key:null,name:'╨Я╤Г╤Б╤В╨╛╨╣ ╨║╨░╨┤╤А',ic:'ЁЯМД'}};
   const a=aim.a;
   const thirds=[[0.33,-0.33],[-0.33,0.33],[0.33,0.33],[-0.33,-0.33],[0,0]];
   let bd=Infinity;
@@ -662,12 +662,12 @@ function evaluateShot(){
   const toCam=camera.position.clone().sub(a.mesh.position).normalize();
   const light=Math.max(0,1-Math.abs(toCam.dot(sunDir))*0.6);
   const bonuses=[
-    {n:'Композиция',p:Math.round(comp*30)},
-    {n:'Свет',p:Math.round(light*20)},
-    {n:'Масштаб',p:Math.round(sizeScore*20)},
-    {n:'Поза',p:Math.round(pose*15)},
-    {n:'Экспозиция',p:Math.round(Math.min(1,sizeScore*1.3+0.2)*10)},
-    {n:'Ракурс',p:Math.round(Math.min(1,comp*0.8+light*0.4)*5)}
+    {n:'╨Ъ╨╛╨╝╨┐╨╛╨╖╨╕╤Ж╨╕╤П',p:Math.round(comp*30)},
+    {n:'╨б╨▓╨╡╤В',p:Math.round(light*20)},
+    {n:'╨Ь╨░╤Б╤И╤В╨░╨▒',p:Math.round(sizeScore*20)},
+    {n:'╨Я╨╛╨╖╨░',p:Math.round(pose*15)},
+    {n:'╨н╨║╤Б╨┐╨╛╨╖╨╕╤Ж╨╕╤П',p:Math.round(Math.min(1,sizeScore*1.3+0.2)*10)},
+    {n:'╨а╨░╨║╤Г╤А╤Б',p:Math.round(Math.min(1,comp*0.8+light*0.4)*5)}
   ];
   const score=bonuses.reduce((s,b)=>s+b.p,0);
   return{ok:true,msg:scoreText(score),score,bonuses,species:a.spec};
@@ -704,7 +704,7 @@ function updateProgress(){
     const sc=captured[s.key];
     const chip=document.createElement('div');
     chip.className='chip'+(sc?' done':'');
-    chip.innerHTML=`<span class="ic">${s.ic}</span><span>${s.name}${sc?' · '+sc:''}</span>`;
+    chip.innerHTML=`<span class="ic">${s.ic}</span><span>${s.name}${sc?' ┬╖ '+sc:''}</span>`;
     el.appendChild(chip);
   });
 }
@@ -722,10 +722,10 @@ function showPopup(shot){
   const st=$('popup .star');
   const nm=$('popup .nm');
   const bc=$('popup .bchips');
-  sc.textContent=shot.ok?shot.score+'':'—';
+  sc.textContent=shot.ok?shot.score+'':'тАФ';
   sc.style.color=shot.score>=70?'#ffd68c':shot.score>=55?'#bfe8a8':'#d7dbe0';
   st.textContent=shot.ok?stars(shot.score):'';
-  nm.textContent=shot.ok?`${shot.species.ic} ${shot.species.name} · ${shot.msg}`:'Кадр пуст — никого в объективе';
+  nm.textContent=shot.ok?`${shot.species.ic} ${shot.species.name} ┬╖ ${shot.msg}`:'╨Ъ╨░╨┤╤А ╨┐╤Г╤Б╤В тАФ ╨╜╨╕╨║╨╛╨│╨╛ ╨▓ ╨╛╨▒╤К╨╡╨║╤В╨╕╨▓╨╡';
   bc.innerHTML=shot.ok?shot.bonuses.map(b=>`<span class="bchip">${b.n} <b>+${b.p}</b></span>`).join(''):'';
   p.style.opacity=1;
   setTimeout(()=>p.style.opacity=0,1600);
@@ -737,22 +737,12 @@ function flash(){
   requestAnimationFrame(()=>{f.style.transition='opacity .45s';f.style.opacity=0;});
 }
 
-const snapRT=new THREE.WebGLRenderTarget(720,405);
-const snap2d=document.createElement('canvas');snap2d.width=720;snap2d.height=405;
-const sctx=snap2d.getContext('2d');
+const snap2d=document.createElement('canvas');
 function snapshot(){
-  renderer.setRenderTarget(snapRT);
-  renderer.clear();
-  renderer.render(scene,camera);
-  renderer.setRenderTarget(null);
-  const w=720,h=405;
-  const px=new Uint8Array(w*h*4);
-  renderer.readRenderTargetPixels(snapRT,0,0,w,h,px);
-  const img=sctx.createImageData(w,h);
-  for(let r=0;r<h;r++){
-    img.data.set(px.subarray((h-1-r)*w*4,(h-r)*w*4),r*w*4);
-  }
-  sctx.putImageData(img,0,0);
+  const W=canvas.width,H=canvas.height;
+  snap2d.width=720;snap2d.height=Math.round(720*H/Math.max(1,W));
+  const sctx=snap2d.getContext('2d');
+  sctx.drawImage(canvas,0,0,snap2d.width,snap2d.height);
   const th=document.createElement('canvas');
   th.width=320;th.height=180;
   const tc=th.getContext('2d');
@@ -772,21 +762,21 @@ function toggleGallery(force){
 function renderGallery(){
   const grid=$('grid');grid.innerHTML='';
   if(shots.length===0){
-    grid.innerHTML='<div class="desc" style="color:#8fa2b8">Пока ни одного кадра. Вперёд на охоту за светом!</div>';
+    grid.innerHTML='<div class="desc" style="color:#8fa2b8">╨Я╨╛╨║╨░ ╨╜╨╕ ╨╛╨┤╨╜╨╛╨│╨╛ ╨║╨░╨┤╤А╨░. ╨Т╨┐╨╡╤А╤С╨┤ ╨╜╨░ ╨╛╤Е╨╛╤В╤Г ╨╖╨░ ╤Б╨▓╨╡╤В╨╛╨╝!</div>';
   }
   [...shots].reverse().forEach((sh,i)=>{
     const card=document.createElement('div');
     card.className='card';
-    const chips=sh.bonuses&&sh.bonuses.length?sh.bonuses.map(b=>`<span class="bchip">${b.n} <b>+${b.p}</b></span>`).join(''):'<span class="bchip" style="border-color:#556;">нет бонусов</span>';
-    const num=`№${shots.length-i}`;
-    card.innerHTML=`<img src="${sh.url}"><div class="cap"><span>${num} · ${sh.ic} ${sh.name}</span><span class="s">${sh.score}</span></div><div class="cap"><span style="color:#9fb0c4;font-size:11px">${sh.msg} ${sh.ok?stars(sh.score):''}</span></div><div style="display:flex;gap:5px;flex-wrap:wrap;padding:6px 10px">${chips}</div><button class="paBtn">Полиарт</button>`;
+    const chips=sh.bonuses&&sh.bonuses.length?sh.bonuses.map(b=>`<span class="bchip">${b.n} <b>+${b.p}</b></span>`).join(''):'<span class="bchip" style="border-color:#556;">╨╜╨╡╤В ╨▒╨╛╨╜╤Г╤Б╨╛╨▓</span>';
+    const num=`тДЦ${shots.length-i}`;
+    card.innerHTML=`<img src="${sh.url}"><div class="cap"><span>${num} ┬╖ ${sh.ic} ${sh.name}</span><span class="s">${sh.score}</span></div><div class="cap"><span style="color:#9fb0c4;font-size:11px">${sh.msg} ${sh.ok?stars(sh.score):''}</span></div><div style="display:flex;gap:5px;flex-wrap:wrap;padding:6px 10px">${chips}</div><button class="paBtn">╨Я╨╛╨╗╨╕╨░╤А╤В</button>`;
     card.querySelector('.paBtn').addEventListener('click',()=>{
       const img=card.querySelector('img');
       const btn=card.querySelector('.paBtn');
       if(btn.dataset.on){
-        img.src=sh.url;btn.dataset.on='';btn.textContent='Полиарт';
+        img.src=sh.url;btn.dataset.on='';btn.textContent='╨Я╨╛╨╗╨╕╨░╤А╤В';
       }else{
-        polyArt(sh.url,u=>{img.src=u;btn.dataset.on='1';btn.textContent='Оригинал';});
+        polyArt(sh.url,u=>{img.src=u;btn.dataset.on='1';btn.textContent='╨Ю╤А╨╕╨│╨╕╨╜╨░╨╗';});
       }
     });
     grid.appendChild(card);
@@ -888,7 +878,7 @@ function loop(){
   composer.render();
   const aim=aimSubject();
   $('brackets').style.opacity=aim?1:0;
-  $('cooldown').textContent=shootCd>0?'ПЕРЕЗАРЯДКА':'ГОТОВО';
+  $('cooldown').textContent=shootCd>0?'╨Я╨Х╨а╨Х╨Ч╨Р╨а╨п╨Ф╨Ъ╨Р':'╨У╨Ю╨в╨Ю╨Т╨Ю';
 }
 loop();
 </script>
